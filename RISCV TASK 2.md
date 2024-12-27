@@ -59,5 +59,20 @@ Once 'sp' comes, which stands for spike pointer, we now need to perform 'addi', 
 This will subtract 16(in decimal which becomes 10 in hexadecimal)
 ![Screenshot 2024-12-27 130228](https://github.com/user-attachments/assets/c81ec53d-0af5-45e8-a93c-9c8243211324)
 
+----
+*EXAMPLE*
+-----
+```
+#include <stdio.h>
 
+int main() {
+    float celsius, fahrenheit;
+    celsius = 28;
+    scanf("%f", &celsius);
+    fahrenheit = (celsius * 9 / 5) + 32;
+    printf("%.2f Celsius is equal to %.2f Fahrenheit\n", celsius, fahrenheit);
+
+    return 0;
+}
+```
 
