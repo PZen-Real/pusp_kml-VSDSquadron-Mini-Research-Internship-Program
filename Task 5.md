@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document provides an overview of a simple colorimeter based on the CH32V003F4U6 microcontroller. The colorimeter is used to measure the absorbance of a liquid sample by detecting the intensity of transmitted light through the sample. The device uses an LED with a wavelength of 615 nm as the light source.
+This document provides an overview of a simple colorimeter based on the CH32V003F4U6 microcontroller. The colorimeter is used to measure the absorbance of a liquid sample by detecting the intensity of transmitted light through the sample. The device uses an LED with a wavelength of 615 nm as the light source. The led, potentiometer and the switch is connected seperately to get high intensity, however they can also be connected directly to RICS-V.
 
 ## Features
 
@@ -22,9 +22,9 @@ Supports serial communication for real-time data logging.
 
 **Function      --->       CH32V003F4U6 (RISC-V) Pin**
 
-LED Control         --->     PD4
+LED Control         --->     TO WIPER OF  POTENTIOMETER
 
-Potentiometer           --->PA0 (ADC Input)
+Potentiometer           --->  TO SWITCH AND THE NEGETIVE TERMINAL OF BATTERY AND THE WIPER TO THE LED
 
 Light Sensor (SDA)      ---> PC1
 
@@ -53,9 +53,7 @@ float A = 0.0;
 BH1750FVI LightSensor(BH1750FVI::k_DevModeContLowRes);
 LiquidCrystal_I2C lcd(0x27, 20, 4);
 
-// Define pins
-#define BUTTON_PIN PA1
-#define RED_LED PD4
+
 
 
 void setup()
