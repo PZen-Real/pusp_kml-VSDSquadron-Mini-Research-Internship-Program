@@ -6,7 +6,7 @@ This document provides an overview of a simple colorimeter based on the CH32V003
 
 ## Features
 
-. Uses a 615 nm LED as the light source.
+Uses a 615 nm LED as the light source.
 
 Includes a potentiometer to adjust the LED intensity.
 
