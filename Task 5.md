@@ -20,21 +20,21 @@ Supports serial communication for real-time data logging.
 
 ## Pin Layout
 
-**Function      --->       CH32V003F4U6 Pin**
+**Function      --->       CH32V003F4U6 (RISC-V) Pin**
 
-LED Control         --->     PB4
+LED Control         --->     PD4
 
 Potentiometer           --->PA0 (ADC Input)
 
-Light Sensor (SDA)      ---> PB7
+Light Sensor (SDA)      ---> PC1
 
-Light Sensor (SCL)     ---> PB6
+Light Sensor (SCL)     ---> PC2
 
 Button Input           ---> PA1
 
-LCD SDA                ---> PB7
+LCD SDA                ---> PC1
 
-LCD SCL                   --->PB6
+LCD SCL                   --->PC2
 
 ## Code
 ```
@@ -55,8 +55,8 @@ LiquidCrystal_I2C lcd(0x27, 20, 4);
 
 // Define pins
 #define BUTTON_PIN PA1
-#define RED_LED PB4
-#define POTENTIOMETER PA0
+#define RED_LED PD4
+
 
 void setup()
 {
